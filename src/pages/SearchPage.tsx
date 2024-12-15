@@ -95,9 +95,9 @@ export default function SearchPage() {
           placeHolder="Search by Cuisine or Restaurant Name"
           onReset={resetSearch}
         />
-        <div className="flex justify-between flex-col gap-3 lg:flex-row">
-          <SearchResultInfo total={results.pagination.total} city={city} />
-          <SortOptionDropdown sortOption={searchState.sortOption} onChange={(value) => setSortOption(value) } />
+        <div className="flex justify-between flex-col gap-3 lg:flex-row ">
+          <SearchResultInfo  total={results.pagination.total} city={city} />
+          <div><SortOptionDropdown sortOption={searchState.sortOption} onChange={(value) => setSortOption(value) } /></div>
         </div>
         
         {results.data.map((restaurant) => (
